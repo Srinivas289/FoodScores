@@ -1,0 +1,27 @@
+<div id="page-wrapper">
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Inpsection Data in List</h1>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Score</th>
+        <th>Grade</th>
+        <th>Inspection Date</th>
+    </tr>
+    <tr *ngFor="let score of ScoreData">
+        <td>{{score.name}}</td>
+        <td>{{score.address}}</td>
+        <th>{{score.city}}</th>
+        <th>{{score.state}}</th>
+        <th>{{score.ins_Score}}</th>
+        <th>{{score.ins_grade}}</th>
+        <th>{{score.ins_date}}</th>
+    </tr>
+</table>
+</div>
