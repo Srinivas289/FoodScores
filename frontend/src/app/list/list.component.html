@@ -14,17 +14,17 @@
         <th>State</th>
         <th>Score</th>
         <th>Grade</th>
-        <th>Inspection Date</th>
+        <th>Inspected Date</th>
     </tr></thead>
     <tbody>
-    <tr *ngFor="let score of ScoreData">
-        <td>{{score.name}}</td>
+    <tr *ngFor="let score of ScoreData" >
         <td>{{score.address}}</td>
+        <td>{{score.name}}</td>
         <td>{{score.city}}</td>
         <td>{{score.state}}</td>
         <td>{{score.ins_Score}}</td>
         <td>{{score.ins_grade}}</td>
-        <td>{{score.ins_date}}</td>
+        <td>{{score.ins_date | date:"dd/MM/yyyy"}}</td>
     </tr>
     </tbody>
 </table></div>

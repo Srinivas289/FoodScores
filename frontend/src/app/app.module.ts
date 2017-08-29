@@ -21,12 +21,13 @@ import { ScoresService } from '../app/Services/scores.service'
 import { ZipScoresService } from '../app/Services/zipscores.service'
 import { CityScoresService } from '../app/Services/city-scores.service'
 import { NewScoresService } from '../app/Services/scores-new.service'
+import { AreaChartComponent1 } from '../app/Charts/area-chart/area-chart.component'
 import { AppRoutingModule} from '../app/app.routing'
 @NgModule({
   imports:      [ BrowserModule,HttpModule,AppRoutingModule ],
   declarations: [ AppComponent,DashboardComponent,KPIComponent,NotificationsComponent,ChatComponent,TimelineComponent,NavLeftComponent,
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
-                  ListComponent,ChartsComponent ],
+                  ListComponent,ChartsComponent,AreaChartComponent1 ],
   bootstrap:    [ AppComponent],
   providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService]
 })

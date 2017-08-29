@@ -7,7 +7,7 @@ import * as Moment from 'moment';
   templateUrl: './area-chart.component.html',
   styleUrls: ['./area-chart.component.css']
 })
-export class AreaChartComponent {
+export class AreaChartComponent1 {
   /* Constructor, needed to get @Injectables */
   constructor(private element: ElementRef) {
     this.htmlElement = this.element.nativeElement;
