@@ -19,12 +19,11 @@
         "prefix": "app",
         "styles": [
             "styles.css",
-            "hello.css",
-            "contents/bootstrap.min.css",
-            "contents/metisMenu.min.css",
+            "../bower_components/bootstrap/dist/css/bootstrap.min.css",
+            "../bower_components/metisMenu/dist//metisMenu.min.css",
             "contents/sb-admin-2.css",
             "contents/morris.css",
-            "contents/font-awesome.css"
+            "../bower_components/font-awesome/css/font-awesome.min.css"
         ],
         "scripts": [],
         "environmentSource": "environments/environment.ts",

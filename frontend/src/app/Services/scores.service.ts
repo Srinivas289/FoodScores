@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core'
 import {Http,Headers} from '@angular/http'
-import { Score } from '../Interfaces/Score.js'
+import { Score , ZipScore } from '../Interfaces/Score.js'
 import 'rxjs/add/operator/toPromise'
 @Injectable()
 export class ScoresService

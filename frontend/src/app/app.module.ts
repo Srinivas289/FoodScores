@@ -1,4 +1,4 @@
-import { NgModule }      from '@angular/core';
+import { NgModule, enableProdMode , OnInit}      from '@angular/core';
 import { HttpModule }      from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterOutlet } from '@angular/router'
@@ -18,6 +18,8 @@ import { BarChartComponent } from '../app/dashboard/charts/bar-chart.component'
 import { ListComponent } from '../app/list/list.component'
 import { ChartsComponent } from '../app/charts/charts.component'
 import { ScoresService } from '../app/Services/scores.service'
+import { ZipScoresService } from '../app/Services/zipscores.service'
+import { CityScoresService } from '../app/Services/city-scores.service'
 import { AppRoutingModule} from '../app/app.routing'
 @NgModule({
   imports:      [ BrowserModule,HttpModule,AppRoutingModule ],
@@ -25,6 +27,10 @@ import { AppRoutingModule} from '../app/app.routing'
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
                   ListComponent,ChartsComponent ],
   bootstrap:    [ AppComponent],
-  providers:    [KPIService,ScoresService]
+  providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService]
 })
-export class AppModule { }
+export class AppModule implements OnInit { 
+  ngOnInit(){
+     enableProdMode();
+  }
+}

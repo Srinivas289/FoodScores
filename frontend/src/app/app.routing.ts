@@ -4,10 +4,11 @@ import { DashboardComponent } from '../app/dashboard/dashboard.component'
 import {ListComponent} from '../app/list/list.component'
 import {ChartsComponent} from '../app/charts/charts.component'
 const appRoutes: Routes = [
-    {path:'dashboard', component:DashboardComponent},
-    {path:'list', component:ListComponent},
-    {path:'charts', component:ChartsComponent},
-    {path:'',redirectTo:'/dashboard',pathMatch:'full'}
+    {path:'dashboard', component: DashboardComponent},
+    {path:'list', component: ListComponent},
+    {path:'charts', component:ChartsComponent}
+    // ,
+    // {path:'',redirectTo:'/dashboard',pathMatch:'full'}
 ];
 
 @NgModule({

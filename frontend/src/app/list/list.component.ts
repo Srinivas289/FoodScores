@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
-import {Score} from '../Interfaces/Score.js'
-import {ScoresService} from '../Services/scores.service.js'
+import {Score} from '../Interfaces/Score.js';
+import {ScoresService} from '../Services/scores.service.js';
 @Component({
   selector: 'my-list',
   templateUrl: 'list.component.html',

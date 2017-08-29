@@ -5,8 +5,8 @@ import 'rxjs/add/operator/toPromise'
 @Injectable()
 export class KPIService
 {
-    //private kpiurl='http://rhsfiscores.azurewebsites.net/dashboard/kpi';
-    private kpiurl='/src/app/data.json';
+    private kpiurl='http://rhsfiscores.azurewebsites.net/dashboard/kpi';
+    //private kpiurl='/src/app/data.json';
     constructor(private http:Http){}
     getKPIData():Promise<KPIDetail> {
        return this.http.get(this.kpiurl).toPromise().then(res=> res.json() as KPIDetail).catch(this.handleError);

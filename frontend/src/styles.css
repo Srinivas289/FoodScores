@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
-
-body {
-    color: blue !important;
+#tblZipTable
+{
+    font-weight: normal;
+    height: 300px;
 }
