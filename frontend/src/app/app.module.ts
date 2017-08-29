@@ -20,6 +20,7 @@ import { ChartsComponent } from '../app/charts/charts.component'
 import { ScoresService } from '../app/Services/scores.service'
 import { ZipScoresService } from '../app/Services/zipscores.service'
 import { CityScoresService } from '../app/Services/city-scores.service'
+import { NewScoresService } from '../app/Services/scores-new.service'
 import { AppRoutingModule} from '../app/app.routing'
 @NgModule({
   imports:      [ BrowserModule,HttpModule,AppRoutingModule ],
@@ -27,7 +28,7 @@ import { AppRoutingModule} from '../app/app.routing'
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
                   ListComponent,ChartsComponent ],
   bootstrap:    [ AppComponent],
-  providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService]
+  providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService]
 })
 export class AppModule implements OnInit { 
   ngOnInit(){

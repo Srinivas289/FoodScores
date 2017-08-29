@@ -1,10 +1,12 @@
 <div id="page-wrapper">
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">Restaurent wise Statistics</h1>
+        <h2 class="page-header">Restaurent wise Statistics</h2>
     </div>
 </div>
-<table class="table">
+<div class="table-responsive">
+<table class="table table-bordered table-hover table-striped">
+    <thead>
     <tr>
         <th>Name</th>
         <th>Address</th>
@@ -13,15 +15,17 @@
         <th>Score</th>
         <th>Grade</th>
         <th>Inspection Date</th>
-    </tr>
+    </tr></thead>
+    <tbody>
     <tr *ngFor="let score of ScoreData">
         <td>{{score.name}}</td>
         <td>{{score.address}}</td>
-        <th>{{score.city}}</th>
-        <th>{{score.state}}</th>
-        <th>{{score.ins_Score}}</th>
-        <th>{{score.ins_grade}}</th>
-        <th>{{score.ins_date}}</th>
+        <td>{{score.city}}</td>
+        <td>{{score.state}}</td>
+        <td>{{score.ins_Score}}</td>
+        <td>{{score.ins_grade}}</td>
+        <td>{{score.ins_date}}</td>
     </tr>
-</table>
+    </tbody>
+</table></div>
 </div>
