@@ -18,5 +18,8 @@
   "resolutions": {
     "jquery": "~2.2.4",
     "angular": "1.6.6"
+  },
+  "dependencies": {
+    "d3": "^4.10.0"
   }
 }

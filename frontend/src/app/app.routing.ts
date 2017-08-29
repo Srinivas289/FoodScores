@@ -6,9 +6,8 @@ import {ChartsComponent} from '../app/charts/charts.component'
 const appRoutes: Routes = [
     {path:'dashboard', component: DashboardComponent},
     {path:'list', component: ListComponent},
-    {path:'charts', component:ChartsComponent}
-    // ,
-    // {path:'',redirectTo:'/dashboard',pathMatch:'full'}
+    {path:'charts', component:ChartsComponent}    ,
+    {path:'',redirectTo:'/dashboard',pathMatch:'full'}
 ];
 
 @NgModule({
