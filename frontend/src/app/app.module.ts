@@ -22,14 +22,18 @@ import { ZipScoresService } from '../app/Services/zipscores.service'
 import { CityScoresService } from '../app/Services/city-scores.service'
 import { NewScoresService } from '../app/Services/scores-new.service'
 import { AreaChartComponent1 } from '../app/Charts/area-chart/area-chart.component'
-import { AppRoutingModule} from '../app/app.routing'
+import { AppRoutingModule} from '../app/app.routing';
+import { LifeCycleComponent } from './life-cycle/life-cycle.component'
+import { FormsModule } from '@angular/forms';
+import { ElementComponent } from './element/element.component'
+import { ElementService } from '../app/Services/element.service'
 @NgModule({
-  imports:      [ BrowserModule,HttpModule,AppRoutingModule ],
+  imports:      [ BrowserModule,HttpModule,AppRoutingModule,FormsModule ],
   declarations: [ AppComponent,DashboardComponent,KPIComponent,NotificationsComponent,ChatComponent,TimelineComponent,NavLeftComponent,
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
-                  ListComponent,ChartsComponent,AreaChartComponent1 ],
+                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent ],
   bootstrap:    [ AppComponent],
-  providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService]
+  providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService,ElementService]
 })
 export class AppModule implements OnInit { 
   ngOnInit(){

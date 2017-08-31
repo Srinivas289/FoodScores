@@ -1,3 +1,9 @@
+export class Element
+{
+	$id: string;
+	Name:string;
+	Count:number
+}
 export class Score
 {
     busid: number;

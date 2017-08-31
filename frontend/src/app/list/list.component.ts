@@ -15,6 +15,6 @@ export class ListComponent implements OnInit {
  }
  loadScores():void {
     //this.scoreService.getScoresData().then(score => this.ScoreData=score);
-    this.scoreService.getScoresData().subscribe(score => this.ScoreData=<Score[]>score.json().slice(1,15));
+    this.scoreService.getScoresData().subscribe(score => this.ScoreData=score.slice(1,15));
  }
 }
