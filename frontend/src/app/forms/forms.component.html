@@ -1,0 +1,40 @@
+<div id="page-wrapper">
+  <div class="row">
+      <div class="col-lg-12">
+          <h2 class="">Working on Angular Forms</h2>
+      </div>
+  </div>
+  <div class="container col-md-5">
+    <form class="form">
+      <label for="formtext">Enter your text</label>
+      <input type="text" class="form-control" name="formtext" id="formtext" [ngModel]="data.textdata"/>
+
+      <label for="formselect">Enter Option</label>
+      <select id="formselect" class="form-control" [ngModel]="data.dddata" name="formselect">
+        <option *ngFor="let option of ddlOptions" value="{{option.value}}">{{option.text}}</option>
+      </select>
+      
+      <div *ngFor="let option of chkOptions">
+          <label for="SelectRadio" >{{option.text}}</label>
+          <input type="radio" name="SelectRadio" value="{{option.value}}" [(ngModel)]="data.radiodata">
+      </div>
+
+      <label for="formcheck">Select Your Checkbox</label>
+      <input type="checkbox" class="" id="formcheck" [(ngModel)]="data.chkdata" name="chkform"/>
+
+      <br class="clear" />
+      <label for="formfile">Upload File</label>
+      <input type="file" id="formfile" class="form-control" />
+
+      <label for="formtextarea" >Enter your large text</label>
+      <textarea name="formarea" id="formtextarea" cols="30" rows="6" class="form-control" [(ngModel)]="data.areadata"></textarea>
+
+      <div class="col-sm-4 right" style="margin-top:10px;">
+        <input type="button" class="form-control btn-primary" #formbutton id="formbutton" value="Submit" />
+      </div>
+    </form>
+  </div>
+  <div class="col-md-5 hide">
+    <h2>Right side section</h2>
+  </div>
+</div>

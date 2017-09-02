@@ -1,7 +1,7 @@
 <div id="page-wrapper">
 <div class="row">
     <div class="col-lg-12">
-        <h2 class="">Restaurant Wise Statistics</h2>
+        <h2 class="">Restaurant Statistics</h2>
     </div>
 </div>
 <div class="table-responsive">
@@ -25,6 +25,9 @@
         <td>{{score.ins_Score}}</td>
         <td>{{score.ins_grade}}</td>
         <td>{{score.ins_date | date:"dd/MM/yyyy"}}</td>
+    </tr>
+    <tr>
+        <td colspan="7" ><button class="btn btn-primary form-control" id="btnLoad" (click)="loadMore()">Load More..</button></td>
     </tr>
     </tbody>
 </table></div>

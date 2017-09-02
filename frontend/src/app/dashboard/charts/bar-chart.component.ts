@@ -9,11 +9,17 @@ import {ZipScoresService} from '../../Services/zipscores.service';
 export class BarChartComponent  implements OnInit
 {
     ZipScoreData : ZipScore[] = [];
+    start:number = 1;
+    pageSize:number = 5;
     constructor(private scoreService:ZipScoresService){}
     ngOnInit(): void {
         this.loadZipScores();
     }
     loadZipScores():void {
-        this.scoreService.getZipScoresData().then(score=>this.ZipScoreData = score);
+        this.scoreService.getZipScoresData().then(score=>this.ZipScoreData = score.slice(1,this.start + this.pageSize));
      }
+    loadMore():void {
+        this.start+=this.pageSize;
+        this.loadZipScores();
+    }
 }

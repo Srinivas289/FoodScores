@@ -26,14 +26,16 @@ import { AppRoutingModule} from '../app/app.routing';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component'
 import { FormsModule } from '@angular/forms';
 import { ElementComponent } from './element/element.component'
-import { ElementService } from '../app/Services/element.service'
+import { ElementService } from '../app/Services/element.service';
+import { FormsComponent } from './forms/forms.component'
+import { LocalScoresService } from '../app/Services/scores-local.service'
 @NgModule({
   imports:      [ BrowserModule,HttpModule,AppRoutingModule,FormsModule ],
   declarations: [ AppComponent,DashboardComponent,KPIComponent,NotificationsComponent,ChatComponent,TimelineComponent,NavLeftComponent,
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
-                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent ],
+                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent, FormsComponent ],
   bootstrap:    [ AppComponent],
-  providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService,ElementService]
+  providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService,ElementService,LocalScoresService]
 })
 export class AppModule implements OnInit { 
   ngOnInit(){

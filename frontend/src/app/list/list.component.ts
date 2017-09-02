@@ -2,6 +2,7 @@ import { Component,OnInit } from '@angular/core';
 import {Score} from '../Interfaces/Score.js';
 // import {ScoresService} from '../Services/scores.service.js';
 import {NewScoresService} from '../Services/scores-new.service';
+import {LocalScoresService} from '../Services/scores-local.service';
 @Component({
   selector: 'my-list',
   templateUrl: 'list.component.html',
@@ -9,12 +10,21 @@ import {NewScoresService} from '../Services/scores-new.service';
 })
 export class ListComponent implements OnInit { 
  ScoreData :Score[];
- constructor(private scoreService:NewScoresService){}
+ start:number = 0;
+ pageSize:number = 10;
+ tempScore :Score[];
+ constructor(private localService:LocalScoresService){}
  ngOnInit(): void {
      this.loadScores();
  }
  loadScores():void {
-    //this.scoreService.getScoresData().then(score => this.ScoreData=score);
-    this.scoreService.getScoresData().subscribe(score => this.ScoreData=score.slice(1,15));
+    //this.scoreService.getScoresData().subscribe(score => this.ScoreData=score.slice(1,this.start + this.pageSize));
+    this.localService.getScoresData().subscribe(score => this.ScoreData = score.slice(this.start,this.pageSize));
  }
+ loadMore():void {
+  console.log('Load More button added');
+  this.start+=this.pageSize;
+  this.tempScore  = this.localService.scores.slice(this.start,this.start + this.pageSize);
+  this.ScoreData =this.ScoreData.concat(this.tempScore);
+}
 }
