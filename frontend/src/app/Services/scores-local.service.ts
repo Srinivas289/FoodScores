@@ -7,12 +7,13 @@ import  'rxjs/add/operator/toPromise'
 @Injectable()
 export class LocalScoresService
 {
-    private kpiurl='http://rhsfiscores.azurewebsites.net/Scores/full';
+    private fullScoreUrl='http://rhsfiscores.azurewebsites.net/Scores/full';
+    private firstPageUrl='http://rhsfiscores.azurewebsites.net/Scores/full/10';
     scores : Score[] ;
     constructor(private http:Http){
-        this.http.get(this.kpiurl).map(res=>res.json() as Score[]).subscribe(resp => this.scores=resp);
+        this.http.get(this.fullScoreUrl).map(res=>res.json() as Score[]).subscribe(resp => this.scores=resp);
     }
     getScoresData(): Observable<Score[]> {
-        return this.http.get(this.kpiurl).map(res=>res.json() as Score[]);
+        return this.http.get(this.firstPageUrl).map(res=>res.json() as Score[]);
     }
 }
