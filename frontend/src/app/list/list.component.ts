@@ -1,8 +1,9 @@
 import { Component,OnInit } from '@angular/core';
-import {Score} from '../Interfaces/Score.js';
+import { Score} from '../Interfaces/Score.js';
 // import {ScoresService} from '../Services/scores.service.js';
-import {NewScoresService} from '../Services/scores-new.service';
-import {LocalScoresService} from '../Services/scores-local.service';
+import { NewScoresService} from '../Services/scores-new.service';
+import { LocalScoresService} from '../Services/scores-local.service';
+import { CamelCasePipe } from '../Pipes/camel-case.pipe';
 @Component({
   selector: 'my-list',
   templateUrl: 'list.component.html',

@@ -28,12 +28,13 @@ import { FormsModule } from '@angular/forms';
 import { ElementComponent } from './element/element.component'
 import { ElementService } from '../app/Services/element.service';
 import { FormsComponent } from './forms/forms.component'
-import { LocalScoresService } from '../app/Services/scores-local.service'
+import { LocalScoresService } from '../app/Services/scores-local.service';
+import { CamelCasePipe } from '../app/Pipes/camel-case.pipe'
 @NgModule({
   imports:      [ BrowserModule,HttpModule,AppRoutingModule,FormsModule ],
   declarations: [ AppComponent,DashboardComponent,KPIComponent,NotificationsComponent,ChatComponent,TimelineComponent,NavLeftComponent,
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
-                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent, FormsComponent ],
+                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent, FormsComponent, CamelCasePipe ],
   bootstrap:    [ AppComponent],
   providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService,ElementService,LocalScoresService]
 })
