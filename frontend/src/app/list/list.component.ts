@@ -28,4 +28,7 @@ export class ListComponent implements OnInit {
   this.tempScore  = this.localService.scores.slice(this.start,this.start + this.pageSize);
   this.ScoreData =this.ScoreData.concat(this.tempScore);
 }
+loadAll():void{
+  this.ScoreData = this.localService.scores;
+}
 }

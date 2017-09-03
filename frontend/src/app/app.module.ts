@@ -29,12 +29,13 @@ import { ElementComponent } from './element/element.component'
 import { ElementService } from '../app/Services/element.service';
 import { FormsComponent } from './forms/forms.component'
 import { LocalScoresService } from '../app/Services/scores-local.service';
-import { CamelCasePipe } from '../app/Pipes/camel-case.pipe'
+import { CamelCasePipe } from '../app/Pipes/camel-case.pipe';
+import { D3BarComponent } from './charts/d3-bar/d3-bar.component'
 @NgModule({
   imports:      [ BrowserModule,HttpModule,AppRoutingModule,FormsModule ],
   declarations: [ AppComponent,DashboardComponent,KPIComponent,NotificationsComponent,ChatComponent,TimelineComponent,NavLeftComponent,
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
-                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent, FormsComponent, CamelCasePipe ],
+                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent, FormsComponent, CamelCasePipe, D3BarComponent ],
   bootstrap:    [ AppComponent],
   providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService,ElementService,LocalScoresService]
 })
