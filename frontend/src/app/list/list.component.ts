@@ -20,7 +20,8 @@ export class ListComponent implements OnInit {
      this.loadScores();
  }
  loadScores():void {
-    if(window.localStorage.getItem(this.storageName) != 'undefined')
+    let storeData = window.localStorage.getItem(this.storageName);
+    if(storeData && storeData != 'undefined')
       {
         this.ScoreData = JSON.parse(window.localStorage.getItem(this.storageName));
       }
