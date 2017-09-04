@@ -14,13 +14,23 @@ export class ListComponent implements OnInit {
  start:number = 0;
  pageSize:number = 10;
  tempScore :Score[];
+ storageName: string = 'health-scores-full-firstpage';
  constructor(private localService:LocalScoresService){}
  ngOnInit(): void {
      this.loadScores();
  }
  loadScores():void {
+    if(window.localStorage.getItem(this.storageName) != 'undefined')
+      {
+        this.ScoreData = JSON.parse(window.localStorage.getItem(this.storageName));
+      }
     //this.scoreService.getScoresData().subscribe(score => this.ScoreData=score.slice(1,this.start + this.pageSize));
-    this.localService.getScoresData().subscribe(score => this.ScoreData = score.slice(this.start,this.pageSize));
+    this.localService.getScoresData().subscribe(score => 
+      {
+        this.ScoreData = score.slice(this.start,this.pageSize);
+        window.localStorage.setItem(this.storageName, JSON.stringify(this.ScoreData));
+      });
+    
  }
  loadMore():void {
   console.log('Load More button added');

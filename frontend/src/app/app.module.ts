@@ -21,7 +21,7 @@ import { ScoresService } from '../app/Services/scores.service'
 import { ZipScoresService } from '../app/Services/zipscores.service'
 import { CityScoresService } from '../app/Services/city-scores.service'
 import { NewScoresService } from '../app/Services/scores-new.service'
-import { AreaChartComponent1 } from '../app/Charts/area-chart/area-chart.component'
+//import { AreaChartComponent1 } from '../app/Charts/area-chart/area-chart.component'
 import { AppRoutingModule} from '../app/app.routing';
 import { LifeCycleComponent } from './life-cycle/life-cycle.component'
 import { FormsModule } from '@angular/forms';
@@ -35,7 +35,7 @@ import { D3BarComponent } from './charts/d3-bar/d3-bar.component'
   imports:      [ BrowserModule,HttpModule,AppRoutingModule,FormsModule ],
   declarations: [ AppComponent,DashboardComponent,KPIComponent,NotificationsComponent,ChatComponent,TimelineComponent,NavLeftComponent,
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
-                  ListComponent,ChartsComponent,AreaChartComponent1, LifeCycleComponent, ElementComponent, FormsComponent, CamelCasePipe, D3BarComponent ],
+                  ListComponent,ChartsComponent, LifeCycleComponent, ElementComponent, FormsComponent, CamelCasePipe, D3BarComponent ],
   bootstrap:    [ AppComponent],
   providers:    [KPIService,ScoresService,ZipScoresService,CityScoresService,NewScoresService,ElementService,LocalScoresService]
 })

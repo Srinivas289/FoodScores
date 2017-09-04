@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        <i class="fa fa-bar-chart-o fa-fw"></i> County wise Statistics
+        <i class="fa fa-bar-chart-o fa-fw"></i> Area wise Statistics
         <div class="pull-right">
             <div class="btn-group">
                 <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
@@ -28,9 +28,9 @@
                     <table class="table table-bordered table-hover table-striped" id="tblZipTable">
                         <thead>
                             <tr>
-                                <th>County Name</th>
-                                <th>City</th>
                                 <th>Zip Code</th>
+                                <th>County Name</th>
+                                <th>City</th>                                
                                 <th>Average Score</th>
                                 <th>latitude</th>
                                 <th>longitude</th>
@@ -40,9 +40,9 @@
                         </thead>
                         <tbody>
                             <tr *ngFor="let score of ZipScoreData">
-                                <td>{{score.place_name}}</td>
-                                <td>{{score.City}}</td>
                                 <td>{{score.Zip}}</td>
+                                <td>{{score.place_name}}</td>
+                                <td>{{score.City}}</td>                                
                                 <td>{{score.Avg_Score}}</td>
                                 <td>{{score.lat}}</td>
                                 <td>{{score.lng}}</td>

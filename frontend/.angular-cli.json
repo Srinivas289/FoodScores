@@ -25,7 +25,10 @@
             "contents/morris.css",
             "../bower_components/font-awesome/css/font-awesome.min.css"
         ],
-        "scripts": [],
+        "scripts": [
+            "../bower_components/d3/d3.min.js",
+            "../bower_components/jquery/dist/jquery.min.js"
+        ],
         "environmentSource": "environments/environment.ts",
         "environments": {
             "dev": "environments/environment.ts",
