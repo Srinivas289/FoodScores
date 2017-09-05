@@ -6,10 +6,11 @@ export class Element
 }
 export class Score
 {
+	$id:string;
     busid: number;
     ins_date: string;
     ins_grade: string;
-    score: string;
+    score: number;
     name: string;
     address: string;
     city: string;
@@ -17,7 +18,7 @@ export class Score
     zip: number;
     lat: number;
     lng: number;
-    ins_Score: number;
+    ins_Score: string;
     ID: number
 }
 export class ZipScore

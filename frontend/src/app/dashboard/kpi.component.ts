@@ -7,7 +7,7 @@ import {KPIDetail} from '../Interfaces/KPI.js'
 })
 export class KPIComponent implements OnInit
 {
-    kpidetail:KPIDetail= {Total:80,ATotal:0,BTotal:0,CTotal:0};
+    kpidetail:KPIDetail= {"Total":3300,"ATotal":2413,"BTotal":792,"CTotal":89};
     message:string="";
     storageName: string = 'health-scores-kpi';
     constructor(private kpiservice:KPIService){}
