@@ -31,8 +31,9 @@ import { FormsComponent } from './forms/forms.component'
 import { LocalScoresService } from '../app/Services/scores-local.service';
 import { CamelCasePipe } from '../app/Pipes/camel-case.pipe';
 import { D3BarComponent } from './charts/d3-bar/d3-bar.component'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 @NgModule({
-  imports:      [ BrowserModule,HttpModule,AppRoutingModule,FormsModule ],
+  imports:      [ BrowserModule,HttpModule,AppRoutingModule,FormsModule, BrowserAnimationsModule ],
   declarations: [ AppComponent,DashboardComponent,KPIComponent,NotificationsComponent,ChatComponent,TimelineComponent,NavLeftComponent,
                   NavRightComponent,TopNavComponent,DonutChartComponent,AreaChartComponent,BarChartComponent,
                   ListComponent,ChartsComponent, LifeCycleComponent, ElementComponent, FormsComponent, CamelCasePipe, D3BarComponent ],
